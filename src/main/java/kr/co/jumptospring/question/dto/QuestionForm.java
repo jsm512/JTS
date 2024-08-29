@@ -1,4 +1,4 @@
-package kr.co.jumptospring.question;
+package kr.co.jumptospring.question.dto;
 
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Size;

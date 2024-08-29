@@ -2,10 +2,12 @@ package kr.co.jumptospring.answer.entity;
 
 import jakarta.persistence.*;
 import kr.co.jumptospring.question.entity.Question;
+import kr.co.jumptospring.user.entity.SiteUser;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
+import java.util.Set;
 
 @Entity
 @Getter
@@ -21,6 +23,14 @@ public class Answer {
 
     private LocalDateTime createDate;
 
+    private LocalDateTime modifyDate;
+
     @ManyToOne
     private Question question;
+
+    @ManyToOne
+    private SiteUser author;
+
+    @ManyToMany
+    Set<SiteUser> voter;
 }
